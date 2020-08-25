@@ -14,6 +14,7 @@
   <body class=" blue-grey darken-3">
     <div class="container divLogin">
       <div class="row divLoginCaixa z-depth-3">
+
         <div class=" col s12">
           <form action="/login" method="POST" class="col s12">
 
@@ -48,7 +49,15 @@
            </div>
          </div>
       </div>
-     
+     <div>
+       {{#if error}}
+        <div class='alert alert-danger'>{{error}}</div>
+       {{else}}
+
+       {{/if}}
+       {{>_msg}}
+       {{{body}}}
+     </div>
     </div>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>

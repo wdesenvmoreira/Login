@@ -1,11 +1,9 @@
 const knex = require('knex')
 const path = require('path')
 
-	const connection = knex({
-	    	client: 'sqlite3',
-    		connection: {
-      		filename: path.resolve(__dirname,'DATAWD')
-   		}
-	})
-
-	export default connection
+module.exports = connection = knex({
+		client: 'sqlite3',
+		connection: {
+		filename: path.resolve(__dirname,'datawd.sqlite3')
+	}
+})
